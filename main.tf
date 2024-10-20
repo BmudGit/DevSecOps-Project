@@ -4,7 +4,9 @@ provider "aws" {
 resource "aws_s3_bucket" "terraform-dso-project" {
   bucket = "terraform-dso-project"
 }
-
+resource "aws_s3_bucket" "terraform-dso-project1" {
+  bucket = "terraform-dso-project1"
+}
 terraform {
   backend "s3" {
     bucket         = "terraform-dso-project"
@@ -12,3 +14,4 @@ terraform {
     region         = "eu-west-2"
   }
 }
+
